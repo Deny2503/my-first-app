@@ -1,0 +1,32 @@
+.resume-card {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #eee;
+  border: 1px solid #e6e6e6;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.resume-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #22223b;
+}
+.resume-field {
+  font-size: 1.08rem;
+  margin: 12px 0;
+}
+.resume-label {
+  font-weight: 600;
+  margin-right: 8px;
+  color: #495057;
+}
+a {
+  color: #365ad1;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
