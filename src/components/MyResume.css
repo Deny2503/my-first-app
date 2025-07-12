@@ -1,0 +1,25 @@
+.resume-form-wrapper {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.resume-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.resume-form h2 {
+  margin-top: 0;
+}
+
+.resume-result {
+  margin-top: 30px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+}
