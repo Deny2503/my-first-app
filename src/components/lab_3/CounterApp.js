@@ -17,6 +17,7 @@ function CounterApp(){
             <CounterButton label="-10" step={-10} count={count} setCount={setCount} />
             <CounterButton label="+40" step={40} count={count} setCount={setCount} />
             <CounterButton label="+5" step={5} count={count} setCount={setCount} />
+            
             <CounterValue value={count} />
         </div>
     )

@@ -49,6 +49,11 @@ function MyResume() {
                 <button type="Submit">Submit</button>
                 </form>
 
+                {showResume
+                ? <h1>Зарегестрирован</h1>
+                : <h1>Не зарегестрирован</h1>
+            }
+
                 {showResume && (
                     <div className="resume-result">
                         <h2>Резюме</h2>
