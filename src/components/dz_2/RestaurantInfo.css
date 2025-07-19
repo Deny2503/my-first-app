@@ -1,0 +1,35 @@
+.restaurant-section {
+  padding: 24px;
+  margin: 24px 0;
+  border-radius: 16px;
+  background: #f7fafc;
+  box-shadow: 0 2px 8px rgba(60,60,60,0.07);
+  max-width: 420px;
+}
+
+.restaurant-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 18px;
+  text-align: center;
+  color: #333;
+}
+
+.restaurant-image {
+  width: 250px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  text-align: center;
+  display: inline;
+}
+
+.restaurant-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #444;
+}
+
+.restaurant-section li {
+  margin-bottom: 8px;
+  font-size: 1.08rem;
+}
