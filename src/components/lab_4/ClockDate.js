@@ -16,7 +16,7 @@ const fontList = [
     "Arial", "Times New Roman", "Roboto", "Montserrat", "Verdana", "Georgia", "Comic Sans MS"
 ];
 
-function Clock({
+function ClockDate({
     showDate: initialShowDate = true,
     backgrounds: initialBackgrounds = defaultBackgrounds,
     fontFamily: initialFontFamily = "Arial",
@@ -149,4 +149,4 @@ function Clock({
     )
 }
 
-export default Clock;
+export default ClockDate;

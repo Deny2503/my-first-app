@@ -5,7 +5,9 @@ import Task1 from './components/lab_1/Task1.js';
 import Profile from './components/lab_1/Profile.js';
 import CounterApp from './components/lab_3/CounterApp.js';
 import React from 'react';
-import Clock from './components/lab_4/Clock.js';
+import Clock from './components/dz_1/Clock.js';
+import ClockDate from './components/lab_4/ClockDate.js';
+import DZ_1 from './components/dz_1/DZ_1.js';
 
 function App() {
   return (
@@ -15,8 +17,8 @@ function App() {
       <Profile /> 
       <CounterApp /> 
       <Welcome />
-      */}
-      <Clock />
+      <ClockDate />*/}
+      <DZ_1 />
     </div>
   );
 }
