@@ -9,6 +9,7 @@ import Clock from './components/dz_1/Clock.js';
 import ClockDate from './components/lab_4/ClockDate.js';
 import DZ_1 from './components/dz_1/DZ_1.js';
 import DZ_2 from './components/dz_2/DZ_2.js';
+import Lab_5 from './components/lab_5/Lab_5.js';
 
 function App() {
   return (
@@ -17,10 +18,11 @@ function App() {
       <Task1 />
       <Profile /> 
       <CounterApp /> 
-      <Welcome />
       <ClockDate /> 
-      <DZ_1 />*/}
-      <DZ_2 />
+      <DZ_1 />
+      <Welcome />
+      <DZ_2 /> */}
+      <Lab_5 />
     </div>
   );
 }

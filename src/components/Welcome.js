@@ -6,6 +6,7 @@ import Calc from './lab_1/calc/Calc.js'
 import Calc1 from './lab_1/calc/Calc1.js'
 import MyResume from "./log_reg/MyResume.js";
 import Fastlogin from "./log_reg/Fastlogin.js";
+import Modal from "./Modal.js";
 
 function Welcome({ name }) {
     const isLoggedIn = true;
@@ -17,11 +18,14 @@ function Welcome({ name }) {
     }
 
     return (
-        <>
+        <React.Fragment>
 
-            {/* <h1 style={style}>Welcome! {name}</h1> */}
+            <h1 style={style}>Welcome! {name}</h1>
 
-            
+            {/* <Modal>
+                <h2>Is Modal</h2>
+                <button>Close</button>
+            </Modal> */}
 
             {/* <Hello />
             <Calc />
@@ -29,7 +33,7 @@ function Welcome({ name }) {
             <MyResume />
             <Fastlogin />
              */}
-        </>
+        </React.Fragment>
     );
 }
 

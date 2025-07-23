@@ -1,0 +1,102 @@
+.menu-block {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fdfdfe;
+  border-radius: 20px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 40, 100, 0.09);
+}
+
+.menu-title {
+  text-align: center;
+  color: #0a4976;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.dish-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dish-item {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.dish-name-btn {
+  background: #e7f3fd;
+  color: #175ba7;
+  font-size: 1.13rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 24px;
+  cursor: pointer;
+  transition: background .18s, color .18s;
+}
+
+.dish-name-btn:hover,
+.dish-name-btn:focus {
+  background: #cbe2f8;
+  color: #123f6a;
+  outline: none;
+}
+
+.modal-backdrop {
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.30);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-window {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(50, 80, 120, 0.17);
+  padding: 32px 28px 22px 28px;
+  min-width: 280px;
+  max-width: 95vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modal-in 0.22s cubic-bezier(.23, .6, .47, 1.17);
+}
+
+@keyframes modal-in {
+  from {
+    transform: translateY(60px) scale(0.92);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #0a4976;
+  cursor: pointer;
+  transition: color 0.15s;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #b01235;
+}
