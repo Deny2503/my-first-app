@@ -10,6 +10,7 @@ import ClockDate from './components/lab_4/ClockDate.js';
 import DZ_1 from './components/dz_1/DZ_1.js';
 import DZ_2 from './components/dz_2/DZ_2.js';
 import Lab_5 from './components/lab_5/Lab_5.js';
+import DZ_3 from './components/dz_3/DZ_3.js';
 
 function App() {
   return (
@@ -21,8 +22,10 @@ function App() {
       <ClockDate /> 
       <DZ_1 />
       <Welcome />
-      <DZ_2 /> */}
+      <DZ_2 /> 
       <Lab_5 />
+      */}
+      <DZ_3 />
     </div>
   );
 }
