@@ -11,6 +11,7 @@ import DZ_1 from './components/dz_1/DZ_1.js';
 import DZ_2 from './components/dz_2/DZ_2.js';
 import Lab_5 from './components/lab_5/Lab_5.js';
 import DZ_3 from './components/dz_3/DZ_3.js';
+import DZ_5 from './components/dz_5/DZ_5.js';
 
 function App() {
   return (
@@ -24,8 +25,8 @@ function App() {
       <Welcome />
       <DZ_2 /> 
       <Lab_5 />
-      */}
-      <DZ_3 />
+      <DZ_3 /> */}
+      <DZ_5 />
     </div>
   );
 }
