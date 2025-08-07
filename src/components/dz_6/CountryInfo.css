@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 0;
+}
+
+.country-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.country-card {
+    margin-bottom: 40px;
+}
+
+.country-name {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.city-card {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.city-emblem {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.city-details h3 {
+    margin: 0 0 5px;
+    color: #333;
+}
+
+.city-details p {
+    margin: 3px 0;
+}
