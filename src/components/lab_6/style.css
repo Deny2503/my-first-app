@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+}
+
+.form input {
+    margin: 5px;
+    padding: 8px;
+}
+
+.specializations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.trainer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.trainer-list li {
+    background: #f0f0f0;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    margin: 5px;
+}
+
+.search {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.reports {
+    margin-top: 20px;
+    padding: 10px;
+    background: #eef;
+    border-radius: 5px;
+}

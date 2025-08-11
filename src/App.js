@@ -13,6 +13,9 @@ import Lab_5 from './components/lab_5/Lab_5.js';
 import DZ_3 from './components/dz_3/DZ_3.js';
 import DZ_5 from './components/dz_5/DZ_5.js';
 import DZ_6 from './components/dz_6/DZ_6.js';
+import Count from './components/Count.js';
+import Timer from './components/Timer.js';
+import Lab_6 from './components/lab_6/Lab_6.js';
 
 function App() {
   return (
@@ -27,8 +30,11 @@ function App() {
       <DZ_2 /> 
       <Lab_5 />
       <DZ_3 /> 
-      <DZ_5 />*/}
+      <DZ_5 />
       <DZ_6 />
+      <Count />
+      <Timer />*/}
+      <Lab_6 />
     </div>
   );
 }
