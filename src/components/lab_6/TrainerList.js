@@ -4,7 +4,7 @@ export default function TrainerList({ trainers, onDelete, onEdit }) {
     const [search, setSearch] = useState("");
 
     const filtered = trainers.filter((t) =>
-        [t.name, t.phone, t.special.join(" ")]
+        [t.name, t.phone, t.specializations.join(" ")]
             .some((field) => field.toLowerCase().includes(search.toLowerCase()))
     );
 
@@ -16,7 +16,7 @@ export default function TrainerList({ trainers, onDelete, onEdit }) {
                     <li key={t.id}>
                         <strong>{t.name}</strong> — {t.phone}
                         <br />
-                        <em>{t.special.join(", ")}</em>
+                        <em>{t.specializations.join(", ")}</em>
                         <div>
                             <button onClick={() => onEdit(t)}>✏️ Редагувати</button>
                             <button onClick={() => onDelete(t.id)}>🗑 Видалити</button>
