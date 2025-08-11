@@ -10,7 +10,7 @@ export default function TrainerForm({ onSave, editingTrainer, onCancel }) {
         if (editingTrainer) {
             setName(editingTrainer.name);
             setPhone(editingTrainer.phone);
-            setspecial(editingTrainer.special);
+            setSpecial(editingTrainer.special);
         }
     }, [editingTrainer]);
 
@@ -20,7 +20,7 @@ export default function TrainerForm({ onSave, editingTrainer, onCancel }) {
         onSave({ id: editingTrainer?.id || Date.now(), name, phone, special });
         setName("");
         setPhone("");
-        setspecial([]);
+        setSpecial([]);
     };
 
     const toggleSpecial = (spec) => {
