@@ -1,0 +1,120 @@
+.app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fact-block {
+    padding: 20px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    background-color: #f0f8ff;
+}
+
+.fact-block h1 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.fact-block button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fact-block button:hover {
+    background-color: #0056b3;
+}
+
+.settings-block {
+    padding: 20px;
+    border: 2px solid #28a745;
+    border-radius: 10px;
+    background-color: #e8f5e9;
+}
+
+.settings-block h2 {
+    color: #28a745;
+}
+
+.settings-block label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.settings-block input[type="color"],
+.settings-block input[type="number"] {
+    margin-left: 10px;
+    padding: 2px 5px;
+}
+
+.settings-block button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.settings-block button:hover {
+    background-color: #1e7e34;
+}
+
+.history-block {
+    padding: 20px;
+    border: 2px solid #ffc107;
+    border-radius: 10px;
+    background-color: #fff8e1;
+}
+
+.history-block h2 {
+    color: #ffc107;
+}
+
+.history-block ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.yoda-block {
+    padding: 20px;
+    border: 2px solid #ff07f3;
+    border-radius: 10px;
+    background-color: #ffc6fc;
+}
+
+.yoda-block button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #ff07f3;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.yoda-block h2 {
+    color: #ff07f3;
+}
+
+.yoda-history-block {
+    padding: 20px;
+    border: 2px solid #ff0707;
+    border-radius: 10px;
+    background-color: #ffb4b4;
+}
+
+.yoda-history-block h2 {
+    color: #ff0707;
+}

@@ -1,0 +1,101 @@
+.weather-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f7f8fa;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.weather-container h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.day-selector {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.day-selector button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #e0e6ef;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.day-selector button.active {
+  background: #4a90e2;
+  color: white;
+  font-weight: bold;
+}
+
+.section {
+  margin-bottom: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.section h3 {
+  margin: 0;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+}
+
+.section:nth-child(odd) h3 {
+  background: #4a90e2;
+}
+
+.section:nth-child(even) h3 {
+  background: #50b27c;
+}
+
+.section:nth-child(3n) h3 {
+  background: #f5a623;
+}
+
+.section:nth-child(4n) h3 {
+  background: #d97ab8;
+}
+
+.weather-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.weather-table th,
+.weather-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #eee;
+  font-size: 15px;
+}
+
+.weather-table th {
+  background: #f3f4f7;
+  font-weight: 600;
+  color: #444;
+}
+
+.weather-table td {
+  color: #333;
+}
+
+.current-hour {
+  background: #ffeaa7 !important;
+  font-weight: bold;
+}
