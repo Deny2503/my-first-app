@@ -40,9 +40,10 @@ function App() {
       <Timer />
       <Lab_6 />
       <UsersList />
-      <NewUsersList />*/}
-      {/* <WeatherForecast /> */}
-      <CatFactsApp />
+      <NewUsersList />
+      <CatFactsApp />*/}
+      {/*  */}
+      <WeatherForecast />
     </div>
   );
 }

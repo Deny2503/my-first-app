@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, } from "react";
 import "./style.css";
 
 export default function WeatherForecast() {
@@ -45,79 +45,100 @@ export default function WeatherForecast() {
         });
     });
 
-    Object.keys(grouped).forEach((day) => {
-        grouped[day] = grouped[day]
-            .filter((d) => parseInt(d.time.split(":")[0]) % 3 === 0)
-            .sort((a, b) => a.time.localeCompare(b.time));
-    });
-
     const days = Object.keys(grouped);
     const currentDay = selectedDay || days[0];
     const currentData = grouped[currentDay];
 
-    const sections = {
-        "Ночь": currentData.filter((d) => +d.time.split(":")[0] >= 0 && +d.time.split(":")[0] < 6),
-        "Утро": currentData.filter((d) => +d.time.split(":")[0] >= 6 && +d.time.split(":")[0] < 12),
-        "День": currentData.filter((d) => +d.time.split(":")[0] >= 12 && +d.time.split(":")[0] < 18),
-        "Вечер": currentData.filter((d) => +d.time.split(":")[0] >= 18 && +d.time.split(":")[0] < 24),
+    const getWeekDay = (dateStr) => {
+        const date = new Date(dateStr);
+        return date.toLocaleDateString("ru-UA", { weekday: "long" });
+    };
+
+    function getWeatherEmoji(temp, hour) {
+        if (temp >= 25) return "☀️"; 
+        if (temp >= 15 && temp < 25) return "🌤️";
+        if (temp >= 5 && temp < 15) return "☁️";
+        return "🌧️";
+    }
+
+    const minTemp = Math.min(...currentData.map((d) => d.temp));
+    const maxTemp = Math.max(...currentData.map((d) => d.temp));
+
+    const getTempClass = (temp) => {
+        if (temp <= 0) return "temp-cold";
+        if (temp <= 15) return "temp-cool";
+        if (temp <= 25) return "temp-warm";
+        return "temp-hot";
     };
 
     return (
-        <div className="weather-container">
-            <h2>Прогноз погоды</h2>
-            <h2>София</h2>
+        <div className=".weather-table-wrapper">
+            <div className="weather-container">
+                <h2>Прогноз погоды — София</h2>
 
-            <div className="day-selector">
-                {days.map((day) => (
-                    <button
-                        key={day}
-                        className={day === currentDay ? "active" : ""}
-                        onClick={() => setSelectedDay(day)}
-                    >
-                        {day}
-                    </button>
-                ))}
+                <div className="day-selector">
+                    {days.map((day) => {
+                        const dayData = grouped[day];
+                        const min = Math.min(...dayData.map((d) => d.temp));
+                        const max = Math.max(...dayData.map((d) => d.temp));
+                        return (
+                            <div
+                                key={day}
+                                className={`day-card ${day === currentDay ? "active" : ""}`}
+                                onClick={() => setSelectedDay(day)}
+                            >
+                                <div className="day-name">{getWeekDay(day)}</div>
+                                <div className="day-date">{day}</div>
+                                <div className="day-temp">
+                                    {min}°C / {max}°C
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+
+                <table className="weather-table">
+                    <thead>
+                        <tr>
+                            <th>Время</th>
+                            {currentData.map((d, i) => (
+                                <th key={i}>{d.time}</th>
+                            ))}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Температура</td>
+                            {currentData.map((d, i) => (
+                                <td key={i} className={getTempClass(d.temp)}>
+                                    {d.temp}°C
+                                </td>
+                            ))}
+                        </tr>
+                        <tr>
+                            <td>Погода</td>
+                            {currentData.map((d, i) => (
+                                <td key={i}>{getWeatherEmoji(d.temp, d.time)}</td>
+                            ))}
+                        </tr>
+                        <tr>
+                            <td>Влажность</td>
+                            {currentData.map((d, i) => (
+                                <td key={i}>{d.humidity}%</td>
+                            ))}
+                        </tr>
+                        <tr>
+                            <td>Ветер</td>
+                            {currentData.map((d, i) => (
+                                <td key={i}>{d.wind} м/с</td>
+                            ))}
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    Минимальная температура: {minTemp}°C, Максимальная температура: {maxTemp}°C
+                </p>
             </div>
-
-            {Object.entries(sections).map(([label, data]) => (
-                data.length > 0 && (
-                    <div key={label} className="section">
-                        <h3>{label}</h3>
-                        <table className="weather-table">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    {data.map((d, i) => (
-                                        <th key={i}>{d.time}</th>
-                                    ))}
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Температура</td>
-                                    {data.map((d, i) => (
-                                        <td key={i}>
-                                            {d.temp}°C
-                                        </td>
-                                    ))}
-                                </tr>
-                                <tr>
-                                    <td>Влажность</td>
-                                    {data.map((d, i) => (
-                                        <td key={i}>{d.humidity}%</td>
-                                    ))}
-                                </tr>
-                                <tr>
-                                    <td>Ветер</td>
-                                    {data.map((d, i) => (
-                                        <td key={i}>{d.wind} м/с</td>
-                                    ))}
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                )
-            ))}
         </div>
     );
 }
