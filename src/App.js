@@ -20,6 +20,7 @@ import UsersList from './components/UsersList.js';
 import NewUsersList from './components/NewUsersList.js';
 import WeatherForecast from './components/lab_7/WeatherForecast.js';
 import CatFactsApp from './components/lab_8/CatFactsApp.js';
+import DZ_7 from './components/dz_7/DZ_7.js';
 
 function App() {
   return (
@@ -41,9 +42,10 @@ function App() {
       <Lab_6 />
       <UsersList />
       <NewUsersList />
-      <CatFactsApp />*/}
+      <CatFactsApp />
+      <WeatherForecast />*/}
       {/*  */}
-      <WeatherForecast />
+      <DZ_7 />
     </div>
   );
 }

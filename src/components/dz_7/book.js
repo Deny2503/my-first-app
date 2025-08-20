@@ -1,0 +1,38 @@
+export const initialBooks = [
+    {
+        id: 1,
+        title: "Майстер і Маргарита",
+        author: "Михайло Булгаков",
+        genre: "Роман",
+        year: "1967",
+        pages: "480",
+        available: true,
+    },
+    {
+        id: 2,
+        title: "Кобзар",
+        author: "Тарас Шевченко",
+        genre: "Поезія",
+        year: "1840",
+        pages: "350",
+        available: true,
+    },
+    {
+        id: 3,
+        title: "1984",
+        author: "Джордж Орвелл",
+        genre: "Антиутопія",
+        year: "1949",
+        pages: "328",
+        available: false,
+    },
+    {
+        id: 4,
+        title: "Гаррі Поттер і філософський камінь",
+        author: "Дж. К. Ролінґ",
+        genre: "Фентезі",
+        year: "1997",
+        pages: "320",
+        available: true,
+    },
+];
