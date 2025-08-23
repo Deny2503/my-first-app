@@ -21,6 +21,8 @@ import NewUsersList from './components/NewUsersList.js';
 import WeatherForecast from './components/lab_7/WeatherForecast.js';
 import CatFactsApp from './components/lab_8/CatFactsApp.js';
 import DZ_7 from './components/dz_7/DZ_7.js';
+import WeatherApp from './components/dz_8/WeatherApp.js';
+import Hello from './components/Hello.js';
 
 function App() {
   return (
@@ -43,9 +45,11 @@ function App() {
       <UsersList />
       <NewUsersList />
       <CatFactsApp />
-      <WeatherForecast />*/}
-      {/*  */}
       <DZ_7 />
+      <WeatherForecast />
+      <Hello />*/}
+      {/*  */}
+      <WeatherApp />
     </div>
   );
 }
