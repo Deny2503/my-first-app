@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 import Welcome from './components/Welcome.js';
 import Task1 from './components/lab_1/Task1.js';
@@ -27,6 +27,7 @@ import WeatherApp from './components/dz_8/WeatherApp.js';
 import Hello from './components/Hello.js';
 import ArtistRoutes from "./components/lab_9/ArtistRoutes";
 import WondersRoutes from "./components/lab_9/WondersRoutes";
+import DZ_9 from './components/dz_9/DZ_9.js';
 
 export default function App() {
   return (
@@ -55,7 +56,7 @@ export default function App() {
       <WeatherApp /> */}
 
 
-      <Router>
+      {/* <Router>
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -63,14 +64,14 @@ export default function App() {
             <Route path="/wonders/*" element={<WondersRoutes />} />
           </Routes>
         </main>
-      </Router>
+      </Router> */}
 
-
+      <DZ_9 />
     </>
   );
 }
 
-function Home() {
+/* function Home() {
   return (
     <div className="home">
       <h2>👋 Ласкаво просимо!</h2>
@@ -81,4 +82,4 @@ function Home() {
       </ul>
     </div>
   );
-}
+} */
