@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,28 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+.main-header {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.home {
+  padding: 30px;
+  text-align: center;
+}
+
+.home li{
+  list-style-type: none;
 }

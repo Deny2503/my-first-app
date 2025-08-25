@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
+
 import Welcome from './components/Welcome.js';
 import Task1 from './components/lab_1/Task1.js';
 import Profile from './components/lab_1/Profile.js';
@@ -23,10 +25,12 @@ import CatFactsApp from './components/lab_8/CatFactsApp.js';
 import DZ_7 from './components/dz_7/DZ_7.js';
 import WeatherApp from './components/dz_8/WeatherApp.js';
 import Hello from './components/Hello.js';
+import ArtistRoutes from "./components/lab_9/ArtistRoutes";
+import WondersRoutes from "./components/lab_9/WondersRoutes";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
+    <>
       {/* 
       <Task1 />
       <Profile /> 
@@ -47,11 +51,34 @@ function App() {
       <CatFactsApp />
       <DZ_7 />
       <WeatherForecast />
-      <Hello />*/}
-      {/*  */}
-      <WeatherApp />
-    </div>
+      <Hello />
+      <WeatherApp /> */}
+
+
+      <Router>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/artist/*" element={<ArtistRoutes />} />
+            <Route path="/wonders/*" element={<WondersRoutes />} />
+          </Routes>
+        </main>
+      </Router>
+
+
+    </>
   );
 }
 
-export default App;
+function Home() {
+  return (
+    <div className="home">
+      <h2>👋 Ласкаво просимо!</h2>
+      <p> Цей додаток допоможе тобі познайомитися з біографією великого митця Леонардо да Вінчі та дізнатися більше про Сім чудес Стародавнього світу. </p>
+      <ul>
+        <li><Link to="/artist">🎨 Відомий художник</Link></li>
+        <li><Link to="/wonders">🏛 Сім чудес Стародавнього світу</Link></li>
+      </ul>
+    </div>
+  );
+}
