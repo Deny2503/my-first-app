@@ -1,5 +1,6 @@
 import logo from './logo.svg';
-import './App.css';
+/* import './App1.css'; */
+import './App2.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 import Welcome from './components/Welcome.js';
@@ -28,6 +29,13 @@ import Hello from './components/Hello.js';
 import ArtistRoutes from "./components/lab_9/ArtistRoutes";
 import WondersRoutes from "./components/lab_9/WondersRoutes";
 import DZ_9 from './components/dz_9/DZ_9.js';
+import CityPhotos from './components/dz_10/CityPhotos.js';
+import CityInfo from './components/dz_10/CityInfo.js';
+import FamousAttraction from './components/dz_10/FamousAttraction.js';
+import OtherAttraction from './components/dz_10/OtherAttraction.js';
+import PoetInfo from './components/dz_10/PoetInfo.js';
+import FamousWorks from './components/dz_10/FamousWorks.js';
+import GlobeTheatre from './components/dz_10/GlobeTheatre.js';
 
 export default function App() {
   return (
@@ -53,8 +61,10 @@ export default function App() {
       <DZ_7 />
       <WeatherForecast />
       <Hello />
-      <WeatherApp /> */}
+      <WeatherApp /> 
+      <DZ_9 />*/}
 
+      
 
       {/* <Router>
         <main>
@@ -66,7 +76,51 @@ export default function App() {
         </main>
       </Router> */}
 
-      <DZ_9 />
+      
+
+      <Router>
+      <div className="container">
+        <h1>Информационный портал</h1>
+        <nav>
+          <Link to="/">Главная</Link>
+          <Link to="/city/info">Город: Информация</Link>
+          <Link to="/city/famous">Город: Памятка</Link>
+          <Link to="/city/other">Город: Другие памятки</Link>
+          <Link to="/city/photos">Город: Фото</Link>
+          <Link to="/shakespeare/info">Шекспир: Инфо</Link>
+          <Link to="/shakespeare/works">Шекспир: Произведения</Link>
+          <Link to="/shakespeare/theatre">Шекспир: Глобус</Link>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={
+            <div className="grid">
+              <div className="card">
+                <h2>Город</h2>
+                <p>Узнайте интересные факты о нашем городе, его истории и достопримечательностях.</p>
+                <img src="https://wondersholidays.com/wp-content/uploads/2018/07/kiev-2-2.jpg" alt="Город"/>
+              </div>
+              <div className="card">
+                <h2>Шекспир</h2>
+                <p>Великий английский поэт и драматург. Узнайте о его жизни, произведениях и театре «Глобус».</p>
+                <img src="https://24smi.org/public/media/resize/800x-/2017/2/10/02.jpg" alt="Шекспир"/>
+              </div>
+            </div>
+          } />
+
+          {/* Маршруты города */}
+          <Route path="/city/info" element={<CityInfo />} />
+          <Route path="/city/famous" element={<FamousAttraction name="Родина-мать" />} />
+          <Route path="/city/other" element={<OtherAttraction attractions={["Киево-Печерская лавра", "Софийский собор", "Площадь Независимости", "Золотые ворота"]} />} />
+          <Route path="/city/photos" element={<CityPhotos />} />
+
+          {/* Маршруты Шекспира */}
+          <Route path="/shakespeare/info" element={<PoetInfo />} />
+          <Route path="/shakespeare/works" element={<FamousWorks works={["Гамлет", "Отелло", "Ромео и Джульетта", "Макбет"]} />} />
+          <Route path="/shakespeare/theatre" element={<GlobeTheatre location="Лондон" />} />
+        </Routes>
+      </div>
+    </Router>
     </>
   );
 }
